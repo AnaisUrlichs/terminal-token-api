@@ -7,7 +7,7 @@ const check = {
       keyManager = new KeyManager();
       const key = keyManager.getKey();
 
-      const api = new CryptoAPI();
+      const api = new CryptoAPI(key);
 
       const priceOutputData = await api.getPriceData(cmd.coin, cmd.cur);
 
@@ -18,4 +18,4 @@ const check = {
   }
 };
 
-module.exports = {check};
+module.exports = check;
